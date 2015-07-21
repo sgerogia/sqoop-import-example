@@ -40,6 +40,13 @@ For example, in IntelliJ the correct setting is highlighted below.
  ![IntelliJ line-feed setting][4]
 
 
+## Possible improvements 
+
+You may want to consider the following as possible improvements (or as exercise), depending on your needs
+
+* adding support for multiple mapped columns
+* nohup-ing the execution of the actual import to parallelize the import in the case of many tables
+ 
 
 
    [1]: ./scripts/tables.txt
