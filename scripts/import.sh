@@ -55,7 +55,7 @@ SQOOP_OPTIONS+=(--hive-import)
 echo "------- Executing Sqoop import. Table [${tablename}] --------"
 echo "Sqoop options: ${SQOOP_OPTIONS[@]}"
 
-/usr/bin/sqoop import "${SQOOP_OPTIONS[@]}" 1>/dev/null
+/usr/bin/sqoop import "${SQOOP_OPTIONS[@]}" &> "./sqoop-import-${tablename}.log"
 
 echo "------- Sqoop import complete --------"
 
