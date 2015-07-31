@@ -1,17 +1,17 @@
-# DB            | Table name             | Hive Map Column           | Split By Column      | Select Conditions
+# DB            | Table name             | Data type mapping                                                | Split By Column      | Select Conditions
 
 # SOME DB
 
-myDatabase       | Customers             | OurWeirdColumn=String     |                      |
-myDatabase       | Invoices              |                           | InvoiceMonth         |
-myDatabase       | Payments              |                           |                      | PaymentType not in ('TEST', 'PLAYING_AROUND')
-myDatabase       | SomeOtherTable        |                           |                      |
+myDatabase       | Customers             | OurWeirdColumn=String                                            |                      |
+myDatabase       | Invoices              |                                                                  | InvoiceMonth         |
+myDatabase       | Payments              |                                                                  |                      | PaymentType not in ('TEST', 'PLAYING_AROUND')
+myDatabase       | SomeOtherTable        |                                                                  |                      |
 
 
 # SOME OTHER DB
 
-myOtherDatabase       | Products         | SomeColumn=Integer        | SupplierId          |
-myOtherDatabase       | Deliveries       |                           |                     |
-myOtherDatabase       | ProductCounts    |                           |                     | CountResult > 0
+myOtherDatabase       | Products         | SomeColumn=Integer,BlobColumn=com.cloudera.sqoop.lib.BlobRef     | SupplierId          |
+myOtherDatabase       | Deliveries       |                                                                  |                     |
+myOtherDatabase       | ProductCounts    |                                                                  |                     | CountResult > 0
 
 
